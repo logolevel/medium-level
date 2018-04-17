@@ -1,0 +1,14 @@
+.form-group.has-error .help-block,
+.input-group .has-error .help-block {
+    display: block;
+}
+.form-group .help-block {
+    display: none;
+}
+table td:first-child {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+table td {
+    text-transform: capitalize;
+}

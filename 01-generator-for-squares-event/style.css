@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+}
+table {
+    border-spacing: 10px;
+}
+td {
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    transition: all 1s ease;
+}
+td[data-color='drover'] {
+    background-color:#FCF6A9;
+}
+
+td[data-color='tangerine-yello'] {
+    background-color: #FCCF05;
+}
+
+td[data-color='dark-orange'] {
+    background-color: #FC8505;
+}
+
+button {
+    cursor: pointer;
+}
