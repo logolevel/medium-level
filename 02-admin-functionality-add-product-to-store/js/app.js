@@ -31,7 +31,6 @@ var productForm = {
         this.hasError();
         this.fieldsIsFill();
         this.collectInfo();
-        this.numberFormat();
 
         if ( this.flagValidatedData ) {
             this.insertRow();
@@ -69,6 +68,8 @@ var productForm = {
         } else {
             this.valueAvailable = 'Out of stock';
         }
+        
+        this.numberFormat();
     },
 
     insertRow: function () {
@@ -120,7 +121,11 @@ var productForm = {
 
     numberFormat: function () {
         this.valuePrice = +this.valuePrice;
-        this.valuePrice = this.valuePrice.toFixed(2) + '$';
+        if ( this.valuePrice !== 0 ) {
+            this.valuePrice = +this.valuePrice.toFixed(2) + '$';
+        } else {
+            this.valuePrice = '-';
+        }
     },
 
     fieldsIsFill: function(event) {
